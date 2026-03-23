@@ -7,7 +7,7 @@ public class Main {
         List<Hardware> hardwareList = repo.getAllHardware();
 
         System.out.println("           HARDWARE MASTERLIST                ");
-        System.out.printf (" %-2s | %-16s | %-18s |%n", "ID", "Brand", "Specification");
+        System.out.printf ("| %-2s | %-16s | %-18s |%n", "ID", "Brand", "Specification");
 
         for (Hardware hw : hardwareList) {
             System.out.printf("| %-2d | %-16s | %-18s |%n",
@@ -28,16 +28,16 @@ public class Main {
         }
 
         System.out.println("\n         LAPTOP & PHONE INVENTORY             ");
-        System.out.printf (" %-28s | %-13s |%n", "Specification", "Quantity");
+        System.out.printf ("| %-28s | %-13s |%n", "Specification", "Quantity");
 
-        System.out.println(" -- LAPTOPS --                                ");
+        System.out.println(" -- LAPTOPS -- ");
         for (Map.Entry<String, Integer> entry : laptopCounts.entrySet()) {
-            System.out.printf("|   %-27s| %-13d |%n", entry.getKey(), entry.getValue());
+            System.out.printf("| %-27s| %-13d |%n", entry.getKey(), entry.getValue());
         }
 
-        System.out.println(" -- PHONES --                                 ");
+        System.out.println(" -- PHONES -- ");
         for (Map.Entry<String, Integer> entry : phoneCounts.entrySet()) {
-            System.out.printf("   %-27s| %-13d |%n", entry.getKey(), entry.getValue());
+            System.out.printf("| %-27s| %-13d |%n", entry.getKey(), entry.getValue());
         }
 
 
